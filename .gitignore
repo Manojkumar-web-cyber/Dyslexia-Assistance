@@ -211,3 +211,6 @@ echo "ml_models/" >> .gitignore
 echo "venv/" >> .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
+config.env
+ml_models/
+venv/
