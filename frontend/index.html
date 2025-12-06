@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dyslexia Reading Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>AI Reading Assistant</h1>
+            <p>Personalized Learning for Dyslexic Readers</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Reading Section -->
+            <section class="reading-section">
+                <h2>📖 Reading Practice</h2>
+                
+                <div class="reading-content" id="readingContent">
+                    <p>Select a passage to begin reading...</p>
+                </div>
+                
+                <div class="reading-controls">
+                    <button id="startReadingBtn" class="btn btn-primary">Start Reading</button>
+                    <button id="pauseReadingBtn" class="btn btn-secondary" disabled>Pause</button>
+                    <button id="getHintBtn" class="btn btn-info">Get Hint</button>
+                </div>
+            </section>
+
+            <!-- Attention Tracking -->
+            <section class="attention-section">
+                <h2>Your Focus</h2>
+                <video id="webcamFeed" autoplay playsinline></video>
+                <div id="attentionMetrics" class="metrics-grid">
+                    <div class="metric">
+                        <span class="label">Gaze:</span>
+                        <span id="gazeDirection" class="value">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">Focus:</span>
+                        <span id="focusLevel" class="value">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">Engagement:</span>
+                        <span id="engagementScore" class="value">--</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Metrics -->
+            <section class="performance-section">
+                <h2> Your Performance</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <span class="label">Accuracy:</span>
+                        <span id="accuracyScore" class="value">0%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">Fluency:</span>
+                        <span id="fluencyScore" class="value">0%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">Words Read:</span>
+                        <span id="wordsRead" class="value">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mentor Feedback -->
+            <section class="mentor-section">
+                <h2>Your Mentor's Feedback</h2>
+                <div id="mentorFeedback" class="feedback-box">
+                    <p>Your personalized feedback will appear here...</p>
+                </div>
+                <button id="getMentorFeedbackBtn" class="btn btn-primary">Get Feedback</button>
+            </section>
+
+            <!-- End Session -->
+            <section class="session-section">
+                <button id="endSessionBtn" class="btn btn-danger">📋 End Session & Summary</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p> Empowering Dyslexic Learners with AI</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+</html>
